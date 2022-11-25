@@ -1,0 +1,198 @@
+$--color-p-pale-blue: #e0e8ff;
+$--color-p-bright-blue: #3829e0;
+
+$--color-n-very-pale-blue: #f5f7ff;
+$--color-n-desaturated-blue: rgb(114, 128, 167);
+$--color-n-dark-blue: #1f2f56;
+$--color-n-white: #fff;
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+
+  background-color: $--color-p-pale-blue;
+}
+
+.order {
+  background-color: #fff;
+  max-width: 46rem;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 4rem 0 rgba(114, 128, 167, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__background {
+    background-color: $--color-p-pale-blue;
+    background-size: 100%;
+    background-repeat: repeat;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  &__box {
+    &--main {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--plan {
+      background-color: $--color-n-very-pale-blue;
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+
+      display: flex;
+      align-items: center;
+    }
+
+    &--price {
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: $--color-n-dark-blue;
+
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    color: $--color-n-desaturated-blue;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__icon {
+    padding: 2.5rem;
+  }
+
+  &__plan {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: $--color-n-dark-blue;
+
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    color: $--color-n-desaturated-blue;
+  }
+
+  &__link {
+    &--change {
+      margin-right: 2.5rem;
+      color: $--color-p-bright-blue;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-decoration: underline;
+      transition: all 0.2s;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(73, 60, 219, 0.737);
+      }
+    }
+
+    &--cancel {
+      color: $--color-n-desaturated-blue;
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-align: center;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $--color-n-dark-blue;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    font-weight: 700;
+    background-color: $--color-p-bright-blue;
+    color: $--color-n-white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2rem 3rem 0 rgba(32, 23, 133, 0.2);
+    transition: all 0.25s;
+
+    &:hover {
+      background-color: rgba(73, 60, 219, 0.737);
+      box-shadow: 0 2.5rem 3rem 0 rgba(37, 27, 151, 0.2);
+    }
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .order {
+    width: 32.5rem;
+
+    &__box {
+      &--main {
+        padding: 2.5rem;
+      }
+    }
+
+    &__icon {
+      padding: 1.5rem;
+    }
+
+    &__title {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+
+    &__paragraph {
+      line-height: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__plan {
+      font-size: 1.4rem;
+    }
+
+    &__price {
+      font-size: 1.4rem;
+    }
+
+    &__link {
+      &--change {
+        font-size: 1.4rem;
+        margin-right: 1.5rem;
+      }
+      &--cancel {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__btn {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
