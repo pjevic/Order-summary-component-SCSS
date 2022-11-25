@@ -14,8 +14,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL:](https://github.com/pjevic/Order-summary-component-SCSS)
-- [Live Site URL:](https://pjevic.github.io/Order-summary-component-SCSS/)
+- [Solution URL](https://github.com/pjevic/Order-summary-component-SCSS)
+- [Live Site URL](https://pjevic.github.io/Order-summary-component-SCSS/)
 
 ## My process
 
